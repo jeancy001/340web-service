@@ -1,0 +1,145 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  img {
+    float: right;
+    margin-left: 1rem;
+  }
+}
+
+.title-head {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.main-container {
+  position: absolute;
+  top: 30%;
+  left: 3%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 300px;
+  background-color: aliceblue;
+  padding: 20px;
+}
+
+.btn-today {
+  padding: 10px;
+  background-color: #4242e0;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.container-items {
+  display: flex;
+  flex-direction: row;
+}
+
+.div-sections {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  margin-top: 20px;
+  padding-right: 50px;
+}
+
+.right-side {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.right-side > li {
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer-content a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 767px) {
+  .container-items {
+    flex-direction: column;
+  }
+
+  .right-side {
+    order: -1;
+    margin: 0 0 20px 0;
+  }
+
+  .right-side > li {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+
+  .div-sections {
+    grid-template-columns: repeat(2, 1fr); 
+    padding-right: 0;
+    gap: 10px;
+  }
+
+  .main-container {
+    position: static;
+    transform: none;
+    margin: 20px auto;
+  }
+
+  img {
+    float: none;
+    margin-left: 0;
+  }
+
+  main {
+    text-align: center;
+  }
+}
