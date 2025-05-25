@@ -11,7 +11,10 @@ app.set('view engine', 'ejs');
 
 // Use express-ejs-layouts
 app.use(expressLayouts);
-
+(()=>{
+    console.log("Hello  , World .")
+})
+()
 app.set("layout", "./layouts/layout");
 
 // Serve static files from the public folder
